@@ -1,0 +1,20 @@
+insert into products(name,brand,price_kobo,notes) values
+('24K Perfume','SuDan Empire',400000,'30ml'),
+('Ashantee Perfume','Ashantee',450000,'30ml'),
+('Oud for Glory Perfume','Lattafa',500000,'30ml'),
+('GK Men Perfume','GK Men',450000,'50ml'),
+('Bakkarat Perfume','SuDan Empire',400000,'25ml'),
+('Red Diamond Perfume','SuDan Empire',400000,'30ml'),
+('Storm Body Spray','Gojo',450000,'200ml'),
+('Explore Body Spray','SuDan Empire',450000,'200ml'),
+('Smart Body Spray','SuDan Empire',450000,'200ml'),
+('Eskoda Body Spray','SuDan Empire',450000,'200ml'),
+('Zara Body Spray — Wonder Rose','Zara',450000,'200ml'),
+('Zara Body Spray — Garden','Zara',450000,'200ml'),
+('CeraVe Cleanser','CeraVe',1800000,'236ml'),
+('Tooth Brush','SuDan Empire',50000,''),
+('Makeup Brush Set','SuDan Empire',400000,''),
+('Colored Lashes','SuDan Empire',800000,'240 pcs'),
+('Eye Glass','SuDan Empire',600000,''),
+('Latina Skirt','SuDan Empire',1500000,'')
+on conflict do nothing;

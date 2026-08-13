@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SuDan Empire | Luxury in Every Spray</title>
+<style>
+:root{--g:#d4af37;--g2:#f5dc86;--b:#080808;--p:#111;--l:#2b2b2b;--m:#aaa}
+*{box-sizing:border-box}body{margin:0;background:var(--b);color:#fff;font:15px Arial,sans-serif}a{text-decoration:none;color:inherit}
+.top{padding:8px;text-align:center;background:#151106;color:var(--g2);font-size:11px;letter-spacing:2px}.nav{position:sticky;top:0;z-index:20;background:#090909eF;border-bottom:1px solid #3c3010;padding:16px 5%;display:flex;justify-content:space-between;align-items:center}.logo{font:700 25px Georgia;color:var(--g)}.logo small{display:block;font:9px Arial;letter-spacing:3px;color:#999}.navlinks{display:flex;gap:22px}.navlinks a:hover{color:var(--g2)}button,.btn{border:1px solid var(--g);background:var(--g);color:#111;border-radius:999px;padding:11px 17px;font-weight:bold;cursor:pointer}.btn.alt{background:transparent;color:#fff}
+.hero{min-height:78vh;display:grid;place-items:center;text-align:center;padding:80px 6%;background:radial-gradient(circle,#3b2d0d,#111 35%,#080808 70%)}.hero h1{font:700 clamp(50px,9vw,100px)/.9 Georgia;margin:15px 0;background:linear-gradient(90deg,#fff,#d4af37,#fff);-webkit-background-clip:text;color:transparent}.ey{color:var(--g2);letter-spacing:4px;font-size:11px;text-transform:uppercase}.hero p{max-width:700px;margin:20px auto;color:#ccc;font-size:18px}
+section{padding:80px 5%}.wrap{max-width:1150px;margin:auto}.head{text-align:center;margin-bottom:35px}.head h2{font:700 42px Georgia;color:var(--g);margin:0 0 8px}.head p{color:var(--m)}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}.card{background:linear-gradient(145deg,#171717,#0d0d0d);border:1px solid var(--l);border-radius:17px;overflow:hidden}.pic{height:270px;background:radial-gradient(circle,#33270c,#080808 70%);display:grid;place-items:center}.pic img{width:100%;height:100%;object-fit:contain;padding:15px}.body{padding:17px}.body h3{font:700 21px Georgia;margin:6px 0}.brand{color:var(--g2);font-size:10px;letter-spacing:1.5px}.notes{color:#888;font-size:12px;min-height:40px}.price{font-weight:bold;font-size:18px;margin-top:10px}.add{width:100%;margin-top:12px;background:#171207;color:var(--g2)}
+.adspace{background:#0d0d0d;border-top:1px solid #30250e;border-bottom:1px solid #30250e}.plans{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.plan{position:relative;text-align:center;border:1px solid #333;border-radius:18px;padding:28px;background:#111}.plan.pop{border-color:#876d1c;box-shadow:0 0 35px #d4af3712}.plan h3{color:var(--g2);letter-spacing:2px}.plan strong{display:block;font:700 36px Georgia;color:var(--g)}.adform{margin-top:25px;padding:25px;border:1px solid #3d3112;border-radius:18px;background:radial-gradient(circle at 80%,#251c08,#101010 50%)}.fields{display:grid;grid-template-columns:1fr 1fr;gap:12px}.field{display:flex;flex-direction:column;gap:6px}.full{grid-column:1/-1}.field input,.field textarea,.field select{background:#161616;color:#fff;border:1px solid #333;border-radius:10px;padding:12px}.field textarea{min-height:90px}.preview{margin-top:15px;padding:20px;border:1px dashed #65521a;border-radius:15px}.preview img,.preview video{max-width:100%;max-height:260px;border-radius:10px;display:block;margin-top:10px}.about{background:#f6f0e3;color:#19160f}.about p{color:#575044;max-width:800px;margin:auto;line-height:1.8}.reviews{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.review{padding:22px;border:1px solid #292929;border-radius:15px;background:#101010}.stars{color:var(--g)}footer{text-align:center;padding:35px;color:#777;border-top:1px solid #222}
+@media(max-width:850px){.grid{grid-template-columns:repeat(2,1fr)}.plans,.reviews{grid-template-columns:1fr}.navlinks{display:none}}@media(max-width:560px){.grid,.fields{grid-template-columns:1fr}.full{grid-column:auto}.hero{min-height:70vh}}
+.cartbar{position:fixed;right:18px;bottom:18px;z-index:30;background:#d4af37;color:#111;border:0;border-radius:999px;padding:13px 18px;font-weight:bold;box-shadow:0 10px 30px #0008}.drawer{position:fixed;inset:0;background:#0009;z-index:40;display:none}.drawer.open{display:block}.drawerbox{position:absolute;right:0;top:0;height:100%;width:min(470px,94vw);background:#101010;border-left:1px solid #4c3d14;padding:24px;overflow:auto}.drawerbox h2{font:700 30px Georgia;color:#d4af37}.cartitem{display:grid;grid-template-columns:70px 1fr auto;gap:10px;align-items:center;padding:12px 0;border-bottom:1px solid #292929}.cartitem img{width:70px;height:70px;object-fit:contain;background:#181818;border-radius:8px}.qty{display:flex;gap:8px;align-items:center}.qty button{padding:5px 9px;border-radius:6px;border:1px solid #555;background:#181818;color:#fff}.checkout{margin-top:20px;padding-top:20px;border-top:1px solid #333}.checkout input,.checkout textarea,.checkout select{width:100%;padding:11px;margin:5px 0 10px;background:#171717;color:#fff;border:1px solid #333;border-radius:8px}.checkout button{width:100%;margin-top:7px}.empty{color:#888;padding:25px 0;text-align:center}.status{font-size:12px;color:#d4af37;margin-top:10px}</style>
+</head>
+<body>
+<div class="top">LUXURY IN EVERY SPRAY • RETAIL • BULK • BUSINESS ADVERTISING</div>
+<header class="nav"><a class="logo" href="#">SuDan Empire<small>LUXURY FRAGRANCE HOUSE</small></a><nav class="navlinks"><a href="#shop">Shop</a><a href="#advertise">Advertise</a><a href="#about">About</a><a href="#reviews">Reviews</a></nav><button onclick="openCart()">🛍 Cart (<span id="cartCount">0</span>)</button></header>
+<section class="hero"><div><div class="ey">SuDan Empire</div><h1>Luxury in Every Spray.</h1><p>Premium Arabian fragrances and a new advertising space for ambitious businesses.</p><a class="btn" href="#shop">Shop Fragrances</a> <a class="btn alt" href="#advertise">Advertise Your Business</a></div></section>
+
+<section id="shop"><div class="wrap"><div class="head"><h2>Featured Fragrances</h2><p>Starter catalogue — replace these with your exact inventory and prices.</p></div><div class="grid" id="products"></div></div></section>
+
+<section class="adspace" id="advertise"><div class="wrap">
+<div class="head"><h2>Advertise With SuDan Empire</h2><p>Upload your business advert, choose a package and pay through Paystack.</p></div>
+<div class="plans">
+<div class="plan"><h3>1 WEEK</h3><strong>₦15,000</strong><p>7 days of advertising</p></div>
+<div class="plan pop"><h3>1 MONTH</h3><strong>₦45,000</strong><p>30 days of advertising</p></div>
+<div class="plan"><h3>3 MONTHS</h3><strong>₦100,000</strong><p>90 days of advertising</p></div>
+</div>
+<div class="adform">
+<div class="fields">
+<div class="field"><label>Package</label><select id="package"><option value="week">1 Week — ₦15,000</option><option value="month">1 Month — ₦45,000</option><option value="quarter">3 Months — ₦100,000</option></select></div>
+<div class="field"><label>Business name</label><input id="biz" placeholder="Your business name"></div>
+<div class="field"><label>Email</label><input id="email" type="email" placeholder="you@example.com"></div>
+<div class="field"><label>WhatsApp number</label><input id="phone" placeholder="2348012345678"></div>
+<div class="field full"><label>Business website/social link</label><input id="link" placeholder="https://..."></div>
+<div class="field full"><label>Short write-up</label><textarea id="description" placeholder="Tell customers what your business offers"></textarea></div>
+<div class="field"><label>Advert image</label><input id="image" type="file" accept="image/*" onchange="previewMedia()"></div>
+<div class="field"><label>Advert video</label><input id="video" type="file" accept="video/*" onchange="previewMedia()"></div>
+</div>
+<div class="preview"><b>Advert Preview</b><div id="previewText">Your business advert will appear here.</div><div id="mediaPreview"></div></div>
+<br><button onclick="submitAdvert()">Continue to Paystack</button>
+<p style="font-size:12px;color:#777">Live Paystack payment and secure upload require the included backend and your Paystack public/secret keys.</p>
+</div></div></section>
+
+<section class="about" id="about"><div class="wrap"><div class="head"><h2>The SuDan Standard</h2><p>SuDan Empire combines premium fragrance retail with a platform where other businesses can reach new customers.</p></div><p>Advertisers can submit an image or video, business description and WhatsApp contact. After successful payment and approval, their advert can be published for the selected period and automatically expire.</p></div></section>
+<section id="reviews"><div class="wrap"><div class="head"><h2>Customer Reviews</h2><p>Replace these sample reviews with real customer feedback.</p></div><div class="reviews"><div class="review"><div class="stars">★★★★★</div><p>Beautiful fragrance and premium presentation.</p><small>Verified customer</small></div><div class="review"><div class="stars">★★★★★</div><p>Easy ordering and a great selection.</p><small>Verified customer</small></div><div class="review"><div class="stars">★★★★★</div><p>The scent lasted beautifully. I will order again.</p><small>Verified customer</small></div></div></div></section>
+<div class="drawer" id="drawer" onclick="if(event.target===this)closeCart()"><div class="drawerbox"><div style="display:flex;justify-content:space-between;align-items:center"><h2>Your Cart</h2><button class="btn alt" onclick="closeCart()">✕</button></div><div id="cartItems"></div><div class="checkout"><h3>Checkout</h3><label>Full name</label><input id="cName" placeholder="Your full name"><label>Phone / WhatsApp</label><input id="cPhone" placeholder="080..."><label>Email</label><input id="cEmail" type="email" placeholder="you@example.com"><label>Delivery address</label><textarea id="cAddress" placeholder="House number, street, area"></textarea><label>State</label><select id="cState"><option value="">Select state</option><option>Akwa Ibom</option><option>Abuja (FCT)</option><option>Lagos</option><option>Rivers</option><option>Cross River</option><option>Other</option></select><label>Delivery</label><select id="delivery"><option value="0">Pickup / arrange delivery — ₦0</option><option value="2000">Standard delivery — ₦2,000</option><option value="3500">Express delivery — ₦3,500</option></select><div style="display:flex;justify-content:space-between;margin:12px 0"><b>Subtotal</b><b id="subtotal">₦0</b></div><div style="display:flex;justify-content:space-between;margin:12px 0"><b>Delivery</b><b id="deliveryTotal">₦0</b></div><div style="display:flex;justify-content:space-between;font-size:20px;color:#d4af37"><b>Total</b><b id="grandTotal">₦0</b></div><button class="btn" onclick="payForOrder()">Pay securely with Paystack</button><button class="btn alt" onclick="orderWhatsApp()">Order via WhatsApp</button><p id="orderMsg" class="status"></p></div></div></div><footer>© 2026 SuDan Empire • Luxury in Every Spray</footer>
+<script>
+const products=[
+["24K Perfume","SuDan Empire",4000,"30ml","product_images/24k.jpg"],
+["Ashantee Perfume","Ashantee",4500,"30ml","product_images/ashantee.jpg"],
+["Oud for Glory Perfume","Lattafa",5000,"30ml","product_images/oud_for_glory.jpg"],
+["GK Men Perfume","GK Men",4500,"50ml","product_images/gk_men.jpg"],
+["Bakkarat Perfume","SuDan Empire",4000,"25ml",""],
+["Red Diamond Perfume","SuDan Empire",4000,"30ml","product_images/red_diamond.jpg"],
+["Storm Body Spray","Gojo",4500,"200ml","product_images/storm.jpg"],
+["Explore Body Spray","SuDan Empire",4500,"200ml",""],
+["Smart Body Spray","SuDan Empire",4500,"200ml","product_images/smart.jpg"],
+["Eskoda Body Spray","SuDan Empire",4500,"200ml",""],
+["Zara Body Spray — Wonder Rose","Zara",4500,"200ml","product_images/zara_wonder_rose.jpg"],
+["Zara Body Spray — Garden","Zara",4500,"200ml","product_images/zara_garden.jpg"],
+["CeraVe Cleanser","CeraVe",18000,"236ml","product_images/cerave.jpg"],
+["Tooth Brush","SuDan Empire",500,"",""],
+["Makeup Brush Set","SuDan Empire",4000,"",""],
+["Colored Lashes","SuDan Empire",8000,"240 pcs",""],
+["Eye Glass","SuDan Empire",6000,"",""],
+["Latina Skirt","SuDan Empire",15000,"",""]
+]
+const money=n=>new Intl.NumberFormat("en-NG",{style:"currency",currency:"NGN",maximumFractionDigits:0}).format(n);
+document.getElementById("products").innerHTML=products.map(p=>`<article class="card"><div class="pic">${p[4]?`<img src="${p[4]}" alt="${p[0]}">`:`<div style="color:#777;text-align:center;padding:30px">Product photo coming soon</div>`}</div><div class="body"><div class="brand">${p[1]}${p[3]?" • "+p[3]:""}</div><h3>${p[0]}</h3><div class="notes">Authentic SuDan Empire catalogue item</div><div class="price">${money(p[2])}</div><button class="add" onclick="addToCart(${products.indexOf(p)})">Add to Cart</button></div></article>`).join("");
+function previewMedia(){
+ const name=document.getElementById("biz").value||"Your Business";const desc=document.getElementById("description").value||"Your business description will appear here.";
+ document.getElementById("previewText").innerHTML=`<h3>${name}</h3><p>${desc}</p><b>💬 WhatsApp contact available</b>`;
+ const box=document.getElementById("mediaPreview");box.innerHTML="";
+ for(const id of ["image","video"]){const f=document.getElementById(id).files[0];if(f){const u=URL.createObjectURL(f);const el=document.createElement(id==="image"?"img":"video");el.src=u;if(id==="video")el.controls=true;box.appendChild(el)}}
+}
+async function submitAdvert(){
+ const biz=document.getElementById("biz").value.trim(), email=document.getElementById("email").value.trim(), phone=document.getElementById("phone").value.trim();
+ if(!biz||!email||!phone){alert("Please complete business name, email and WhatsApp number.");return}
+ const fd=new FormData(); fd.append("business",biz);fd.append("email",email);fd.append("phone",phone);fd.append("link",document.getElementById("link").value);fd.append("description",document.getElementById("description").value);fd.append("package",document.getElementById("package").value);
+ const im=document.getElementById("image").files[0], vid=document.getElementById("video").files[0];if(im)fd.append("image",im);if(vid)fd.append("video",vid);
+ try{const r=await fetch("/api/adverts/submit",{method:"POST",body:fd});const a=await r.json();if(!r.ok)throw new Error(a.error||"Could not submit advert");const pay=await fetch("/api/adverts/pay",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({advertId:a.id,email})});const d=await pay.json();if(!pay.ok)throw new Error(d.error||"Could not initialize payment");window.location.href=d.authorization_url;}catch(e){alert(e.message+". Make sure the backend and Paystack keys are configured.")}
+}
+let cart=JSON.parse(localStorage.getItem("sudan_cart")||"[]");
+function saveCart(){localStorage.setItem("sudan_cart",JSON.stringify(cart));renderCart()}
+function addToCart(i){const x=cart.find(v=>v.i===i);if(x)x.qty++;else cart.push({i,qty:1});saveCart();openCart()}
+function changeQty(i,d){const x=cart.find(v=>v.i===i);if(!x)return;x.qty+=d;if(x.qty<=0)cart=cart.filter(v=>v.i!==i);saveCart()}
+function removeItem(i){cart=cart.filter(v=>v.i!==i);saveCart()}
+function openCart(){document.getElementById("drawer").classList.add("open");renderCart()}
+function closeCart(){document.getElementById("drawer").classList.remove("open")}
+function renderCart(){const box=document.getElementById("cartItems");if(!box)return;document.getElementById("cartCount").textContent=cart.reduce((a,b)=>a+b.qty,0);if(!cart.length){box.innerHTML='<div class="empty">Your cart is empty.</div>';document.getElementById("subtotal").textContent="₦0";document.getElementById("deliveryTotal").textContent="₦0";document.getElementById("grandTotal").textContent="₦0";return}let sub=0;box.innerHTML=cart.map(x=>{const p=products[x.i];sub+=p[2]*x.qty;return `<div class="cartitem"><div>${p[4]?`<img src="${p[4]}">`:'<div style="width:70px;height:70px;background:#181818;border-radius:8px"></div>'}</div><div><b>${p[0]}</b><div style="color:#aaa">${money(p[2])}</div><div class="qty"><button onclick="changeQty(${x.i},-1)">−</button><span>${x.qty}</span><button onclick="changeQty(${x.i},1)">+</button></div></div><button class="btn alt" onclick="removeItem(${x.i})">Remove</button></div>`}).join("");const d=Number(document.getElementById("delivery").value||0);document.getElementById("subtotal").textContent=money(sub);document.getElementById("deliveryTotal").textContent=money(d);document.getElementById("grandTotal").textContent=money(sub+d)}
+document.getElementById("delivery").addEventListener("change",renderCart);
+function customer(){return{name:document.getElementById("cName").value.trim(),phone:document.getElementById("cPhone").value.trim(),email:document.getElementById("cEmail").value.trim(),address:document.getElementById("cAddress").value.trim(),state:document.getElementById("cState").value,delivery:Number(document.getElementById("delivery").value||0)}}
+async function payForOrder(){if(!cart.length)return alert("Your cart is empty.");const c=customer();if(!c.name||!c.phone||!c.email||!c.address||!c.state)return alert("Please complete all checkout fields.");const subtotal=cart.reduce((s,x)=>s+products[x.i][2]*x.qty,0),total=subtotal+c.delivery;const msg=document.getElementById("orderMsg");msg.textContent="Creating your secure payment...";const order={customer_name:c.name,email:c.email,phone:c.phone,address:c.address,state:c.state,total_kobo:total*100,items:cart.map(x=>({name:products[x.i][0],qty:x.qty,price_kobo:products[x.i][2]*100}))};try{const r=await fetch("/api/orders",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(order)});const o=await r.json();if(!r.ok)throw new Error(o.error||"Order could not be created");const p=await fetch("/api/orders/pay",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({orderId:o.id,email:c.email})});const d=await p.json();if(!p.ok)throw new Error(d.error||"Payment could not be initialized");window.location.href=d.authorization_url}catch(e){msg.textContent=e.message+". Please try again or use WhatsApp."}}
+function orderWhatsApp(){if(!cart.length)return alert("Your cart is empty.");const c=customer();const lines=["Hello SuDan Empire, I want to order:",...cart.map(x=>`${products[x.i][0]} x${x.qty} — ${money(products[x.i][2]*x.qty)}`),`Subtotal: ${document.getElementById("subtotal").textContent}`,`Delivery: ${document.getElementById("deliveryTotal").textContent}`,`Total: ${document.getElementById("grandTotal").textContent}`,`Name: ${c.name}`,`Phone: ${c.phone}`,`Address: ${c.address}`,`State: ${c.state}`];window.open("https://wa.me/2349153171227?text="+encodeURIComponent(lines.join("\n")),"_blank")}
+renderCart();
+</script>
+</body></html>
