@@ -10,7 +10,15 @@
 .hero{min-height:78vh;display:grid;place-items:center;text-align:center;padding:80px 6%;background:radial-gradient(circle,#3b2d0d,#111 35%,#080808 70%)}.hero h1{font:700 clamp(50px,9vw,100px)/.9 Georgia;margin:15px 0;background:linear-gradient(90deg,#fff,#d4af37,#fff);-webkit-background-clip:text;color:transparent}.ey{color:var(--g2);letter-spacing:4px;font-size:11px;text-transform:uppercase}.hero p{max-width:700px;margin:20px auto;color:#ccc;font-size:18px}
 section{padding:80px 5%}.wrap{max-width:1150px;margin:auto}.head{text-align:center;margin-bottom:35px}.head h2{font:700 42px Georgia;color:var(--g);margin:0 0 8px}.head p{color:var(--m)}
 .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}.card{background:linear-gradient(145deg,#171717,#0d0d0d);border:1px solid var(--l);border-radius:17px;overflow:hidden}.pic{height:270px;background:radial-gradient(circle,#33270c,#080808 70%);display:grid;place-items:center}.pic img{width:100%;height:100%;object-fit:contain;padding:15px}.body{padding:17px}.body h3{font:700 21px Georgia;margin:6px 0}.brand{color:var(--g2);font-size:10px;letter-spacing:1.5px}.notes{color:#888;font-size:12px;min-height:40px}.price{font-weight:bold;font-size:18px;margin-top:10px}.add{width:100%;margin-top:12px;background:#171207;color:var(--g2)}
-.adspace{background:#0d0d0d;border-top:1px solid #30250e;border-bottom:1px solid #30250e}.plans{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.plan{position:relative;text-align:center;border:1px solid #333;border-radius:18px;padding:28px;background:#111}.plan.pop{border-color:#876d1c;box-shadow:0 0 35px #d4af3712}.plan h3{color:var(--g2);letter-spacing:2px}.plan strong{display:block;font:700 36px Georgia;color:var(--g)}.adform{margin-top:25px;padding:25px;border:1px solid #3d3112;border-radius:18px;background:radial-gradient(circle at 80%,#251c08,#101010 50%)}.fields{display:grid;grid-template-columns:1fr 1fr;gap:12px}.field{display:flex;flex-direction:column;gap:6px}.full{grid-column:1/-1}.field input,.field textarea,.field select{background:#161616;color:#fff;border:1px solid #333;border-radius:10px;padding:12px}.field textarea{min-height:90px}.preview{margin-top:15px;padding:20px;border:1px dashed #65521a;border-radius:15px}.preview img,.preview video{max-width:100%;max-height:260px;border-radius:10px;display:block;margin-top:10px}.about{background:#f6f0e3;color:#19160f}.about p{color:#575044;max-width:800px;margin:auto;line-height:1.8}.reviews{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.review{padding:22px;border:1px solid #292929;border-radius:15px;background:#101010}.stars{color:var(--g)}footer{text-align:center;padding:35px;color:#777;border-top:1px solid #222}
+.adspace{background:#0d0d0d;border-top:1px solid #30250e;border-bottom:1px solid #30250e}
+.adslider{position:relative;height:320px;border:1px solid #3d3112;border-radius:18px;overflow:hidden;margin:0 0 30px;background:#111}
+.adslide{position:absolute;inset:0;opacity:0;transition:opacity .8s}
+.adslide.active{opacity:1}
+.adslide img{width:100%;height:100%;object-fit:cover;filter:brightness(.55)}
+.adcaption{position:absolute;left:30px;right:30px;bottom:30px}
+.adcaption h3{font:700 38px Georgia;color:var(--g);margin:0 0 10px}
+.adcaption p{font-size:20px;margin:0}
+.plans{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.plan{position:relative;text-align:center;border:1px solid #333;border-radius:18px;padding:28px;background:#111}.plan.pop{border-color:#876d1c;box-shadow:0 0 35px #d4af3712}.plan h3{color:var(--g2);letter-spacing:2px}.plan strong{display:block;font:700 36px Georgia;color:var(--g)}.adform{margin-top:25px;padding:25px;border:1px solid #3d3112;border-radius:18px;background:radial-gradient(circle at 80%,#251c08,#101010 50%)}.fields{display:grid;grid-template-columns:1fr 1fr;gap:12px}.field{display:flex;flex-direction:column;gap:6px}.full{grid-column:1/-1}.field input,.field textarea,.field select{background:#161616;color:#fff;border:1px solid #333;border-radius:10px;padding:12px}.field textarea{min-height:90px}.preview{margin-top:15px;padding:20px;border:1px dashed #65521a;border-radius:15px}.preview img,.preview video{max-width:100%;max-height:260px;border-radius:10px;display:block;margin-top:10px}.about{background:#f6f0e3;color:#19160f}.about p{color:#575044;max-width:800px;margin:auto;line-height:1.8}.reviews{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.review{padding:22px;border:1px solid #292929;border-radius:15px;background:#101010}.stars{color:var(--g)}footer{text-align:center;padding:35px;color:#777;border-top:1px solid #222}
 @media(max-width:850px){.grid{grid-template-columns:repeat(2,1fr)}.plans,.reviews{grid-template-columns:1fr}.navlinks{display:none}}@media(max-width:560px){.grid,.fields{grid-template-columns:1fr}.full{grid-column:auto}.hero{min-height:70vh}}
 .cartbar{position:fixed;right:18px;bottom:18px;z-index:30;background:#d4af37;color:#111;border:0;border-radius:999px;padding:13px 18px;font-weight:bold;box-shadow:0 10px 30px #0008}.drawer{position:fixed;inset:0;background:#0009;z-index:40;display:none}.drawer.open{display:block}.drawerbox{position:absolute;right:0;top:0;height:100%;width:min(470px,94vw);background:#101010;border-left:1px solid #4c3d14;padding:24px;overflow:auto}.drawerbox h2{font:700 30px Georgia;color:#d4af37}.cartitem{display:grid;grid-template-columns:70px 1fr auto;gap:10px;align-items:center;padding:12px 0;border-bottom:1px solid #292929}.cartitem img{width:70px;height:70px;object-fit:contain;background:#181818;border-radius:8px}.qty{display:flex;gap:8px;align-items:center}.qty button{padding:5px 9px;border-radius:6px;border:1px solid #555;background:#181818;color:#fff}.checkout{margin-top:20px;padding-top:20px;border-top:1px solid #333}.checkout input,.checkout textarea,.checkout select{width:100%;padding:11px;margin:5px 0 10px;background:#171717;color:#fff;border:1px solid #333;border-radius:8px}.checkout button{width:100%;margin-top:7px}.empty{color:#888;padding:25px 0;text-align:center}.status{font-size:12px;color:#d4af37;margin-top:10px}</style>
 </head>
@@ -23,6 +31,21 @@ section{padding:80px 5%}.wrap{max-width:1150px;margin:auto}.head{text-align:cent
 
 <section class="adspace" id="advertise"><div class="wrap">
 <div class="head"><h2>Advertise With SuDan Empire</h2><p>Upload your business advert, choose a package and pay through Paystack.</p></div>
+
+<div class="adslider">
+<div class="adslide active">
+<img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=1200&q=80" alt="Fashion">
+<div class="adcaption"><h3>Promote Your Fashion Brand</h3><p>Book your advert with us.</p></div>
+</div>
+<div class="adslide">
+<img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=1200&q=80" alt="Restaurant">
+<div class="adcaption"><h3>Advertise Your Restaurant</h3><p>Reach more customers through SuDan Empire.</p></div>
+</div>
+<div class="adslide">
+<img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=1200&q=80" alt="Apartment">
+<div class="adcaption"><h3>Promote Your Property</h3><p>Book your advert with us today.</p></div>
+</div>
+</div>
 <div class="plans">
 <div class="plan"><h3>1 WEEK</h3><strong>₦15,000</strong><p>7 days of advertising</p></div>
 <div class="plan pop"><h3>1 MONTH</h3><strong>₦45,000</strong><p>30 days of advertising</p></div>
@@ -96,5 +119,15 @@ function customer(){return{name:document.getElementById("cName").value.trim(),ph
 async function payForOrder(){if(!cart.length)return alert("Your cart is empty.");const c=customer();if(!c.name||!c.phone||!c.email||!c.address||!c.state)return alert("Please complete all checkout fields.");const subtotal=cart.reduce((s,x)=>s+products[x.i][2]*x.qty,0),total=subtotal+c.delivery;const msg=document.getElementById("orderMsg");msg.textContent="Creating your secure payment...";const order={customer_name:c.name,email:c.email,phone:c.phone,address:c.address,state:c.state,total_kobo:total*100,items:cart.map(x=>({name:products[x.i][0],qty:x.qty,price_kobo:products[x.i][2]*100}))};try{const r=await fetch("/api/orders",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(order)});const o=await r.json();if(!r.ok)throw new Error(o.error||"Order could not be created");const p=await fetch("/api/orders/pay",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({orderId:o.id,email:c.email})});const d=await p.json();if(!p.ok)throw new Error(d.error||"Payment could not be initialized");window.location.href=d.authorization_url}catch(e){msg.textContent=e.message+". Please try again or use WhatsApp."}}
 function orderWhatsApp(){if(!cart.length)return alert("Your cart is empty.");const c=customer();const lines=["Hello SuDan Empire, I want to order:",...cart.map(x=>`${products[x.i][0]} x${x.qty} — ${money(products[x.i][2]*x.qty)}`),`Subtotal: ${document.getElementById("subtotal").textContent}`,`Delivery: ${document.getElementById("deliveryTotal").textContent}`,`Total: ${document.getElementById("grandTotal").textContent}`,`Name: ${c.name}`,`Phone: ${c.phone}`,`Address: ${c.address}`,`State: ${c.state}`];window.open("https://wa.me/2349153171227?text="+encodeURIComponent(lines.join("\n")),"_blank")}
 renderCart();
+</script>
+
+<script>
+setInterval(()=>{
+ const slides=document.querySelectorAll('.adslide');
+ if(!slides.length) return;
+ let current=[...slides].findIndex(s=>s.classList.contains('active'));
+ slides[current].classList.remove('active');
+ slides[(current+1)%slides.length].classList.add('active');
+},5000);
 </script>
 </body></html>
