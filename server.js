@@ -30,11 +30,43 @@ app.get("/admin",(req,res)=>res.sendFile(path.join(__dirname,"admin.html")));
 app.get("/api/config",(req,res)=>res.json({paystackPublicKey:PAYSTACK_PUBLIC_KEY}));
 
 // Admin prototype authentication endpoint. Replace with session/JWT + hashed password before production.
-app.post("/api/admin/login",async(req,res)=>{
-  const {username,password}=req.body;
-  if(username===process.env.ADMIN_USERNAME && password===process.env.ADMIN_PASSWORD)
-    return res.json({ok:true});
-  res.status(401).json({ok:false,error:"Invalid credentials"});
+app.post("/api/admin/login", async (req, res) => {
+  try {
+    const { username, password } = req.body;
+
+    const result = await db(
+      "SELECT * FROM admin_users WHERE username=$1",
+      [username]
+    );
+
+    if (!result.rows.length) {
+      return res.status(401).json({
+        ok: false,
+        error: "Invalid credentials"
+      });
+    }
+
+    const admin = result.rows[0];
+
+    if (admin.password_hash !== password) {
+      return res.status(401).json({
+        ok: false,
+        error: "Invalid credentials"
+      });
+    }
+
+    return res.json({
+      ok: true,
+      username: admin.username
+    });
+  } catch (error) {
+    console.error(error);
+
+    return res.status(500).json({
+      ok: false,
+      error: "Server error"
+    });
+  }
 });
 
 
