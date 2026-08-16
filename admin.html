@@ -29,7 +29,29 @@ const ads=[
 {id:6,biz:"Golden Events",pack:"1 Month",pay:"Paid",status:"expired",expiry:"2026-07-01"}];
 let products=[["Bade’e Al Oud Oud for Glory","Lattafa","₦45,000"],["Khamrah","Lattafa","₦44,500"],["Yara Pink","Lattafa","₦38,000"],["9PM","Afnan","₦45,000"]];
 let reviews=[["Customer A","★★★★★","Beautiful fragrance.","approved"],["Customer B","★★★★★","Fast delivery.","pending"],["Customer C","★★★★☆","Nice scent.","approved"]];
-async function login(){if(const username = document.getElementById("adminUser").value; const password = document.getElementById("adminPass").value; const message = document.getElementById("loginMessage"); try {const response = await fetch("/api/admin/login",.classList.add("hidden")}else alert("Invalid demo login.")}
+async function login(){if(const username = document.getElementById("adminUser").value; const password = document.getElementById("adminPass").value; const message = document.getElementById("loginMessage"); try {const response = await fetch("/api/admin/login",login", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        username,
+        password
+      })
+    });
+
+    const data = await response.json();
+
+    if (response.ok && data.ok) {
+      document.getElementById("login").classList.add("hidden");
+      localStorage.setItem("adminLoggedIn", "true");
+    } else {
+      message.textContent = "Invalid username or password.";
+    }
+  } catch (error) {
+    message.textContent = "Unable to connect to the server.";
+  }
+}
 function logout(){document.getElementById("login").classList.remove("hidden")}
 function filterAds(f,el){document.querySelectorAll(".tab").forEach(x=>x.classList.remove("active"));el.classList.add("active");const list=f==="all"?ads:ads.filter(a=>a.status===f);document.getElementById("ads").innerHTML=list.map(a=>`<tr><td><b>${a.biz}</b></td><td>${a.pack}</td><td><span class="badge ${a.pay==="Paid"?"paid":"pending"}">${a.pay}</span></td><td><span class="badge ${a.status}">${a.status}</span></td><td>${a.expiry}</td><td class="actions">${a.status==="pending"?`<button class="btn" onclick="approve(${a.id})">Approve</button><button class="btn dark" onclick="reject(${a.id})">Reject</button>`:`<button class="btn dark" onclick="feature(${a.id})">Feature</button>`}</td></tr>`).join("")}
 function approve(id){const a=ads.find(x=>x.id===id);a.status="active";a.expiry=new Date(Date.now()+30*86400000).toISOString().slice(0,10);filterAds("all",document.querySelector(".tab.active"))}
