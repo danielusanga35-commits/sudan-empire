@@ -89,7 +89,26 @@ const products=[
 ["Makeup Brush Set","SuDan Empire",4000,"","product_images/IMG_2248.jpeg"],
 ["Colored Lashes","SuDan Empire",8000,"240 pcs","product_images/IMG_2249.jpeg"],
 ["Eye Glass","SuDan Empire",6000,"","product_images/IMG_2245.jpeg"],
-["Latina Skirt","SuDan Empire",15000,"","product_images/IMG_2244.jpeg"]
+["Latina Skirt","SuDan Empire",15000,"","product_images/IMG_2244.jpeg"],
+["Vaseline","SuDan Empire",5500,"","product_images/IMG_2373.jpeg"],
+["Channel Bag","SuDan Empire",12000,"","product_images/IMG_2370.jpeg"],
+["Double Mint Toothpaste","SuDan Empire",1500,"","product_images/IMG_2369.jpeg"],
+["Hero Perfume","SuDan Empire",4000,"","product_images/IMG_2368.jpeg"],
+["Lysozyme Toothpaste","SuDan Empire",2000,"","product_images/IMG_2366.jpeg"],
+["Foreign Extract Soap","SuDan Empire",2000,"","product_images/IMG_2365.jpeg"],
+["Love Soap","SuDan Empire",2000,"","product_images/IMG_2364.jpeg"],
+["Neck Roll On","SuDan Empire",1500,"","product_images/IMG_2363.jpeg"],
+["Minshzee Roll on","SuDan Empire",2000,"","product_images/IMG_2362.jpeg"],
+["3in1 Jean Miss Perfume","SuDan Empire",18000,"","product_images/IMG_2359.jpeg"],
+["100ml 24k Perfume","SuDan Empire",7000,"","product_images/IMG_2357.jpeg"],
+["Body Perfume Lotion","SuDan Empire",4000,"","product_images/IMG_2356.jpeg"],
+["Breast Enlargement Oil","SuDan Empire",7000,"","product_images/IMG_2375.jpeg"],
+["Double Fun Vibrator","SuDan Empire",15000,"","product_images/IMG_2376.jpeg"],
+["Yingrum Soap","SuDan Empire",1000,"","product_images/IMG_2377.jpeg"],
+["Hair Removal","SuDan Empire",2500,"","product_images/IMG_2378.jpeg"],
+["Rose Sucker","SuDan Empire",20000,"","product_images/IMG_2381.jpeg"],
+["Bullet Vibrator","SuDan Empire",10000,"","product_images/IMG_2382.jpeg"],
+["Ball Vibrator","SuDan Empire",10000,"","product_images/IMG_2383.jpeg"],
 ]
 const money=n=>new Intl.NumberFormat("en-NG",{style:"currency",currency:"NGN",maximumFractionDigits:0}).format(n);
 document.getElementById("products").innerHTML=products.map(p=>`<article class="card"><div class="pic">${p[4]?`<img src="${p[4]}" alt="${p[0]}">`:`<div style="color:#777;text-align:center;padding:30px">Product photo coming soon</div>`}</div><div class="body"><div class="brand">${p[1]}${p[3]?" • "+p[3]:""}</div><h3>${p[0]}</h3><div class="notes">Authentic SuDan Empire catalogue item</div><div class="price">${money(p[2])}</div><button class="add" onclick="addToCart(${products.indexOf(p)})">Add to Cart</button></div></article>`).join("");
